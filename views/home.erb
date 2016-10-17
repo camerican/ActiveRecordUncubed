@@ -2,7 +2,7 @@
 
   <ul>
   <% @companies.each do |company| %>
-    <li><%= company.name %> (<%= company.size %>)
+  <li><a href="/company/<%= company.id %>"><%= company.name %></a> (<%= company.size %>)
       <ol>
         <% company.jobs do |job| %>
           <li><%= job.title %></li>

@@ -9,6 +9,11 @@ get '/' do
   erb :home
 end
 
+get '/company/:id' do 
+  @company = Company.find(params[:id])
+  erb :company_profile
+end
+
 get '/company/new' do
   erb :new_company
 end
