@@ -2,6 +2,15 @@
 
   <ul>
   <% @companies.each do |company| %>
-    <li><%= company.name %></li>
+    <li><%= company.name %> (<%= company.size %>)
+      <ol>
+        <% company.jobs do |job| %>
+          <li><%= job.title %></li>
+        <% end %>
+      </ol>
+    </li>
   <% end %>
   </ul>
+  <% Company.last.jobs do |job| %>
+  <li><%= job.title %></li>
+<% end %>

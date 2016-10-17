@@ -1,0 +1,13 @@
+<!-- we want to submit to the current path of '/company/new'... so we should be able to get away without an "action" attribute -->
+<form method="POST">
+  <label>Name</label><input name="name" /><br />
+  <label>Size</label><input name="size" /><br />
+  <label>Industry</label>
+    <select name="industry">
+      <option value="media">Media</option>
+      <option value="education">Education</option>
+      <option value="finance">Finance</option>
+    </select><br />
+  <input type="submit" value="Create" />
+</form>
+<%= @company %>
